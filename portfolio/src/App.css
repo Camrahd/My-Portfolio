@@ -2,6 +2,8 @@
   text-align: left;
   font-family: Arial, sans-serif;
   background-color: #e7e7d9;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -58,6 +60,8 @@
 .about-container {
   min-height: 100vh;
   background-color: #f7f7f7;
+  margin-bottom: 0; /* Ensure there's no extra space at the bottom */
+  padding-bottom: 0; /* Adjust if needed */
 }
 
 .about-title {
@@ -133,6 +137,8 @@
   padding: 2rem;
   background-color: #f5f5f5; /* Light gray background */
   color: #333; /* Dark text color */
+  margin-top: 0; /* Ensure there's no extra space at the top */
+  padding-top: 0; /* Adjust if needed */
 }
 
 /* Section header */
