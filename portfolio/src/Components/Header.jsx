@@ -3,6 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header className="Header">
+     <h1>Dharmendra Reddy Chitte</h1>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -10,7 +11,7 @@ function Header() {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <h1>My Portfolio</h1>
+     
     </header>
   );
 }

@@ -11,7 +11,7 @@ function Projects() {
            <br />
           <strong>Description:</strong> Designed and implemented a full-stack library management system with integrated web page functionality, using MySQL and MongoDB.
           <br />
-          <a href="https://github.com/your-github-username/library-management-system" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Dharma41/Library_Management_System" target="_blank" rel="noopener noreferrer">
             Github Repository
           </a>
         </p>
@@ -23,7 +23,7 @@ function Projects() {
            <br />
           <strong>Description:</strong> Developed a comprehensive budgeting application for departmental expense planning, using React.js. Enhanced and completed the initial codebase with attention to specific feature requirements.
           <br />
-          <a href="https://github.com/your-github-username/budget-allocation-application" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Dharma41/ejtos-react_budget_app" target="_blank" rel="noopener noreferrer">
             Github Repository
           </a>
         </p>
