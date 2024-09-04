@@ -3,6 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header className="Header">
+    <div className="about-background_header"></div> 
      <h1>Dharmendra Reddy Chitte</h1>
       <nav>
         <ul>
