@@ -1,3 +1,5 @@
+import React from 'react';
+// import Header from './Header';
 import java_logo from '../Assets/java_logo.png';
 import python_logo from '../Assets/python_logo.png';
 import html_logo from '../Assets/html_logo.png';
@@ -7,6 +9,7 @@ import profile from '../Assets/profile.png';
 import react_logo from '../Assets/react_logo.png';
 import nodejs_logo from '../Assets/nodejs_logo.png';
 import django_logo from '../Assets/django_logo.png';
+import '../CSS/About.css';
 
 
 const About = () => {

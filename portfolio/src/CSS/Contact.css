@@ -1,0 +1,90 @@
+/* Contact Section Styling */
+.contact-container {
+    height: 100vh;
+    /* background: linear-gradient(135deg, #c6eaf3dd, #a0e0b7, #74ccb4); Start with a gradient */
+    background:url('../Assets/contact.png');
+    background-size: cover; /* Necessary for the animation to create movement */
+    animation: gradientAnimation 15s ease infinite;
+    color: #4b2e83; /* grape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+  
+.contact-content {
+    max-width: 600px;
+    background-color: rgba(14, 200, 175, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4b2e83;
+    margin-bottom: 1.5rem;
+}
+  
+.contact-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e57373;
+    margin-bottom: 1rem;
+}
+  
+.contact-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+  
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+  
+.contact-icon-link {
+    color: #4b2e83;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+  
+.contact-icon-link:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+  
+/* Background Animation Keyframes */
+/* @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+  
+    .contact-content {
+        padding: 1.5rem;
+    }
+  
+    .contact-title {
+        font-size: 2rem;
+    }
+  
+    .contact-text {
+        font-size: 1rem;
+    }
+} */ 
