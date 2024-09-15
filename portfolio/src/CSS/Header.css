@@ -1,0 +1,93 @@
+/* Header Styling */
+.Header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+  
+  /* Background Overlay */
+  .about-background_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00ff26, transparent); 
+    z-index: 0;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  
+  /* Title Styling */
+  .Header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #00ff26;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+  }
+  
+  /* Navigation Styling */
+  .Header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .Header nav ul li {
+    margin: 0;
+  }
+  .Header, #about {
+    margin: 0;
+    padding: 20;
+  }
+  /* Navigation Buttons */
+  .nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff26;
+    color: #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Hover Effect */
+  .nav-button:hover {
+    background-color: #333;
+    color: #00ff26;
+    border: 2px solid #00ff26;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .Header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .Header nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .Header h1 {
+      font-size: 1.5rem;
+    }
+  }

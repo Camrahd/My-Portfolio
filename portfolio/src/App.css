@@ -13,64 +13,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Header Styling */
-.Header {
-  background-color: #333;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Title Styling */
-.Header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #00ff26; /* Gold color for a standout effect */
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Navigation Styling */
-.Header nav ul {
-  list-style: none;
+/* Reset body margin and padding */
+body {
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-/* Navigation Links Styling */
-.Header nav ul li {
-  margin: 0;
-}
-
-.Header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-}
-
-.Header nav ul li a:hover {
-  color: #ffcc00; /* Matches the title color on hover */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .Header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .Header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
 }

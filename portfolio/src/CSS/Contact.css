@@ -15,7 +15,7 @@
   
 .contact-content {
     max-width: 600px;
-    background-color: rgba(14, 200, 175, 0.7);
+    background-color: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -57,34 +57,3 @@
     transform: scale(1.1);
 }
   
-/* Background Animation Keyframes */
-/* @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-  
-/* Responsive Design */
-/* @media (max-width: 768px) {
-    .contact-container {
-        padding: 1.5rem;
-    }
-  
-    .contact-content {
-        padding: 1.5rem;
-    }
-  
-    .contact-title {
-        font-size: 2rem;
-    }
-  
-    .contact-text {
-        font-size: 1rem;
-    }
-} */ 
