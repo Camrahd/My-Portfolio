@@ -1,84 +1,101 @@
-/* General Styles for the Projects Section */
+/* Container Styling */
 .projects-container {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-    color: #fff;
-    text-align: center;
-  }
-  
-  .projects-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  
-  /* Project Card Grid */
-  .project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  /* Project Card Styles */
-  .project-card {
-    background: #fff;
-    color: #333;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .project-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #0072ff;
-    font-weight: bold;
-  }
-  
-  .project-card .project-date {
-    font-size: 0.9rem;
-    color: #666;
-    display: block;
-    margin-top: 0.5rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #555;
-  }
-  
-  .project-card .project-link {
-    color: #0072ff;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-  }
-  
-  .project-card .project-link:hover {
-    color: #00c6ff;
-    border-bottom: 2px solid #00c6ff;
-  }
-  
-  /* Hover Effect on the Cards */
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .project-cards {
-      grid-template-columns: 1fr;
-    }
-  
-    .projects-container {
-      padding: 2rem 1rem;
-    }
-  }
+  padding: 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+  position: relative; /* For absolute arrow positioning */
+  overflow: hidden; /* Hide overflow to show one project at a time */
+}
+
+/* Title Styling */
+.projects-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Scrollable Project Cards Container */
+.project-cards {
+  display: flex;
+  overflow: hidden; /* Hide overflow to show only one project at a time */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  width: 100%;
+}
+
+/* Each Project Card */
+.project-card {
+  min-width: 100%; /* Ensure each card takes up full viewport width */
+  margin: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent shrinking of cards */
+  transition: transform 0.3s ease;
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Project Card Title */
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Project Date Styling */
+.project-date {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Project Links */
+.project-link {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Left and Right Arrow Positioning */
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
