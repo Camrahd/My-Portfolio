@@ -26,10 +26,8 @@ function Header() {
           <li><a href="#contact" className="nav-button">Contact</a></li>
         </ul>
       </nav>
-
-      {/* Dark Mode Toggle Icon */}
-      <button onClick={toggleDarkMode} className="dark-mode-toggle">
-        {darkMode ? '🌞' : '🌜'} {/* Switch icon based on the mode */}
+      <button onClick={toggleDarkMode} className="nav-button dark-mode-toggle">
+        {darkMode ? '☀️ ' : '🌙 '} {/* Sun for light mode, moon for dark mode */}
       </button>
     </header>
   );

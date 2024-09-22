@@ -78,7 +78,7 @@
 }
 
 /* Dark Mode Styles */
-.dark-mode {
+body.dark-mode {
   background-color: #121212;
   color: #fff;
 }
@@ -135,4 +135,32 @@
   .Header h1 {
     font-size: 1.5rem;
   }
+}
+#about {
+  margin: 0; /* Remove margin on the next component */
+  padding: 40px 20px; /* Add padding if needed */
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Dark Mode for Other Sections (About, Projects, etc.) */
+.dark-mode #about {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode #projects {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode #contact {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Global reset for next components */
+#about, #projects, #contact {
+  margin: 0;
+  padding: 40px 20px;
 }

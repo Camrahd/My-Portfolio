@@ -1,70 +1,79 @@
-/* Container Styling */
+/* Projects Section Styling */
 .projects-container {
-  padding: 40px;
-  background-color: #f5f5f5;
+  position: relative;
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
   text-align: center;
-  position: relative; /* For absolute arrow positioning */
-  overflow: hidden; /* Hide overflow to show one project at a time */
+  overflow: hidden;
+  margin-top: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Title Styling */
+/* Project Title */
 .projects-title {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
 }
 
-/* Scrollable Project Cards Container */
+/* Project Cards Container */
 .project-cards {
   display: flex;
-  overflow: hidden; /* Hide overflow to show only one project at a time */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow: hidden;
   width: 100%;
+  scroll-behavior: smooth;
+  gap: 20px;
+  scroll-snap-type: x mandatory; /* Ensures smooth snap scrolling */
+  position: relative;
+  margin-bottom: 0;
 }
 
-/* Each Project Card */
+/* Project Card Styling */
 .project-card {
-  min-width: 100%; /* Ensure each card takes up full viewport width */
-  margin: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Prevent shrinking of cards */
-  transition: transform 0.3s ease;
+  padding: 20px;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0;
 }
 
-/* Card Hover Effect */
 .project-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Card Title */
+/* Project Title and Details */
 .project-card h3 {
-  font-size: 22px;
+  font-size: 1.5rem;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
-/* Project Date Styling */
 .project-date {
-  font-size: 14px;
-  color: #777;
+  font-size: 0.9rem;
+  color: #888;
 }
 
-/* Project Description */
 .project-card p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  text-align: left;
+  font-size: 1rem;
+  color: var(--text-color-light);
+  margin-bottom: 10px;
 }
 
-/* Project Links */
+/* Project Link Styling */
 .project-link {
   display: inline-block;
   margin-right: 10px;
-  font-size: 16px;
   color: #007bff;
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
@@ -72,30 +81,66 @@
   color: #0056b3;
 }
 
-/* Arrow Buttons */
+/* Arrow Button Styling */
 .arrow-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--arrow-background);
+  color: #fff;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   cursor: pointer;
+  font-size: 1.5rem;
   border-radius: 50%;
-  font-size: 18px;
-  z-index: 10;
+  transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .arrow-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #007bff;
 }
 
-/* Left and Right Arrow Positioning */
 .arrow-left {
   left: 10px;
 }
 
 .arrow-right {
   right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 2rem 1rem;
+  }
+
+  .arrow-btn {
+    display: none; /* Hide arrow buttons on smaller screens */
+  }
+
+  .project-cards {
+    gap: 10px;
+  }
+
+  .project-card {
+    width: 100%; /* Make cards full width on smaller screens */
+  }
+}
+
+/* Dark Mode Variables */
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --text-color-light: #555;
+  --card-background: #fff;
+  --arrow-background: #333;
+}
+
+body.dark-mode {
+  --background-color: #1c1c1c;
+  --text-color: #ddd;
+  --text-color-light: #bbb;
+  --card-background: #333;
+  --arrow-background: #444;
 }

@@ -7,14 +7,20 @@ function Projects() {
   // Scroll to the next project
   const handleNext = () => {
     if (projectContainerRef.current) {
-      projectContainerRef.current.scrollBy({ left: projectContainerRef.current.offsetWidth, behavior: 'smooth' });
+      projectContainerRef.current.scrollBy({
+        left: projectContainerRef.current.offsetWidth, // Scroll by the width of the container (1 card width)
+        behavior: 'smooth'
+      });
     }
   };
 
   // Scroll to the previous project
   const handlePrev = () => {
     if (projectContainerRef.current) {
-      projectContainerRef.current.scrollBy({ left: -projectContainerRef.current.offsetWidth, behavior: 'smooth' });
+      projectContainerRef.current.scrollBy({
+        left: -projectContainerRef.current.offsetWidth, // Scroll backward by the width of the container
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -58,7 +64,7 @@ function Projects() {
           </p>
           <a href="https://getgithubuserbio.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
             Live Application
-          </a>
+          </a><br></br>
           <a href="https://github.com/Dharma41/github_username" target="_blank" rel="noopener noreferrer" className="project-link">
             Github Repository
           </a>
