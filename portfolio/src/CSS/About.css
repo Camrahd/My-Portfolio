@@ -106,11 +106,29 @@
   align-items: center;
 }
 
-.education-details h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Education Details Styling */
+.education-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Optional: Adjust spacing between elements */
+}
+
+/* Align GPA with the University Name */
+.education-item p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* GPA Styling */
+.gpa {
+  font-size: 1.1rem;
   color: #007bff;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  margin-left: 10px; /* Adjust spacing as needed */
 }
 
 .education-year {
@@ -118,6 +136,7 @@
   color: #777;
   transition: color 0.3s ease;
 }
+
 
 /* Skills Grid */
 .skills-grid {
