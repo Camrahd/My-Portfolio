@@ -1,166 +1,88 @@
-/* Header Styling */
+/* General Header Styling */
 .Header {
-  background-color: #333;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Background Overlay */
-.about-background_header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #00ff26, transparent); 
-  z-index: 0;
-  opacity: 0.2;
-  pointer-events: none;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Vibrant gradient */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Title Styling */
-.Header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #00ff26;
-  font-family: 'Roboto', sans-serif;
-  z-index: 1;
-}
-
-/* Navigation Styling */
-.Header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Header Container */
+.header-container {
   display: flex;
-  gap: 20px;
-  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.Header nav ul li {
-  margin: 0;
-}
-
-.Header, #about {
-  margin: 0;
-  padding: 20;
-}
-
-/* Navigation Buttons */
-.nav-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00ff26;
-  color: #333;
-  border-radius: 5px;
-  font-size: 1rem;
+/* Logo */
+.logo h1 {
+  font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Hover Effect */
-.nav-button:hover {
-  background-color: #333;
-  color: #00ff26;
-  border: 2px solid #00ff26;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #fff;
-}
-
-.dark-mode .Header {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode .Header h1 {
-  color: #00ff26;
-}
-
-.dark-mode .nav-button {
-  background-color: #00ff26;
-  color: #222;
-}
-
-.dark-mode .nav-button:hover {
-  background-color: #222;
-  color: #00ff26;
-  border: 2px solid #00ff26;
-}
-
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-  background-color: transparent;
-  border: none;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s infinite alternate;
   cursor: pointer;
-  font-size: 24px;
-  color: #00ff26;
-  transition: color 0.3s ease;
-  z-index: 1;
-  margin-left: 20px;
 }
 
-.dark-mode-toggle:hover {
-  color: #fff;
+/* Navigation Menu */
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .Header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .Header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .Header h1 {
-    font-size: 1.5rem;
-  }
-}
-#about {
-  margin: 0; /* Remove margin on the next component */
-  padding: 40px 20px; /* Add padding if needed */
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Dark Mode for Other Sections (About, Projects, etc.) */
-.dark-mode #about {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode #projects {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode #contact {
-  background-color: #222;
-  color: #fff;
-}
-
-/* Global reset for next components */
-#about, #projects, #contact {
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
   margin: 0;
-  padding: 40px 20px;
+}
+
+.nav-links .nav-item {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links .nav-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #6dd5ed, 0 0 20px #2193b0;
+  }
+  100% {
+    text-shadow: 0 0 20px #2193b0, 0 0 30px #6dd5ed;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .navbar {
+    margin-top: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

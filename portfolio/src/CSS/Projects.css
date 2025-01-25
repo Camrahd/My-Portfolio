@@ -1,146 +1,81 @@
-/* Projects Section Styling */
+/* Projects Container */
 .projects-container {
-  position: relative;
   padding: 4rem 2rem;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #ffffff;
   text-align: center;
-  overflow: hidden;
-  margin-top: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
-/* Project Title */
 .projects-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--text-color);
   margin-bottom: 2rem;
-  transition: color 0.3s ease;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s infinite alternate;
 }
 
-/* Project Cards Container */
-.project-cards {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  scroll-behavior: smooth;
-  gap: 20px;
-  scroll-snap-type: x mandatory; /* Ensures smooth snap scrolling */
-  position: relative;
-  margin-bottom: 0;
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
-/* Project Card Styling */
+/* Project Card */
 .project-card {
-  background-color: var(--card-background);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 100%;
-  flex-shrink: 0;
-  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Project Title and Details */
-.project-card h3 {
-  font-size: 1.5rem;
-  color: var(--text-color);
-  margin-bottom: 10px;
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-date {
   font-size: 0.9rem;
-  color: #888;
+  color: #d1d1d1;
 }
 
-.project-card p {
-  font-size: 1rem;
-  color: var(--text-color-light);
-  margin-bottom: 10px;
-}
-
-/* Project Link Styling */
 .project-link {
   display: inline-block;
-  margin-right: 10px;
-  color: #007bff;
-  text-decoration: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   font-weight: bold;
-  transition: color 0.3s ease;
+  color: #ffffff;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .project-link:hover {
-  color: #0056b3;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  transform: scale(1.1);
 }
 
-/* Arrow Button Styling */
-.arrow-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--arrow-background);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-  z-index: 1;
-}
-
-.arrow-btn:hover {
-  background-color: #007bff;
-}
-
-.arrow-left {
-  left: 10px;
-}
-
-.arrow-right {
-  right: 10px;
+/* Animations */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #2193b0, 0 0 20px #6dd5ed, 0 0 30px #2193b0;
+  }
+  100% {
+    text-shadow: 0 0 20px #6dd5ed, 0 0 30px #2193b0, 0 0 50px #6dd5ed;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .projects-container {
-    padding: 2rem 1rem;
-  }
-
-  .arrow-btn {
-    display: none; /* Hide arrow buttons on smaller screens */
-  }
-
-  .project-cards {
-    gap: 10px;
-  }
-
   .project-card {
-    width: 100%; /* Make cards full width on smaller screens */
+    padding: 1.5rem;
   }
-}
-
-/* Dark Mode Variables */
-:root {
-  --background-color: #f5f5f5;
-  --text-color: #333;
-  --text-color-light: #555;
-  --card-background: #fff;
-  --arrow-background: #333;
-}
-
-body.dark-mode {
-  --background-color: #1c1c1c;
-  --text-color: #ddd;
-  --text-color-light: #bbb;
-  --card-background: #333;
-  --arrow-background: #444;
 }
