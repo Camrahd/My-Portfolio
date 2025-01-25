@@ -1,39 +1,37 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import '../CSS/Projects.css';
 
 function Projects() {
-  const projectContainerRef = useRef(null);
-
-  // Scroll to the next project
-  const handleNext = () => {
-    if (projectContainerRef.current) {
-      projectContainerRef.current.scrollBy({
-        left: projectContainerRef.current.offsetWidth, // Scroll by the width of the container (1 card width)
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  // Scroll to the previous project
-  const handlePrev = () => {
-    if (projectContainerRef.current) {
-      projectContainerRef.current.scrollBy({
-        left: -projectContainerRef.current.offsetWidth, // Scroll backward by the width of the container
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <section id="projects" className="projects-container">
       <h2 className="projects-title">My Projects</h2>
+      <div className="project-grid">
+      <div className="project-card">
+          <h3>Real Time Chat Application <span className="project-date">(Sept 2024 - Dec 2024)</span></h3>
+          
+  <strong>Description:</strong>
+  <p>
+    The Real-Time Chat Application is designed to offer a seamless and secure communication platform for users to interact in real-time. Key features include:
+  </p>
+  <ul>
+    <li><strong>Google Authentication:</strong> Enables users to securely log in and access the platform.</li>
+    <li><strong>One-on-One Chats:</strong> Supports private and secure individual conversations.</li>
+  </ul>
+  <p><strong>Technology Stack:</strong></p>
+  <ul>
+    <li><strong>Frontend:</strong> Built with React.js to deliver an interactive and user-friendly interface.</li>
+    <li><strong>Backend:</strong> Developed using Node.js to handle server-side operations efficiently.</li>
+    <li><strong>Database:</strong> Utilized MongoDB Atlas for scalable and reliable data storage.</li>
+  </ul>
 
-      {/* Left Arrow Button */}
-      <button className="arrow-btn arrow-left" onClick={handlePrev}>
-        &#8249;
-      </button>
 
-      <div className="project-cards" ref={projectContainerRef}>
+          <a href="https://github.com/Dharma41/Chat_Application" target="_blank" rel="noopener noreferrer" className="project-link">
+            Github Repository
+          </a><br />
+          <a href="https://realtimechatapp12.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+            Live Application
+          </a>
+        </div>
         {/* Library Management System */}
         <div className="project-card">
           <h3>Library Management System <span className="project-date">(Sept 2023 - Dec 2023)</span></h3>
@@ -64,17 +62,12 @@ function Projects() {
           </p>
           <a href="https://getgithubuserbio.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
             Live Application
-          </a><br></br>
+          </a><br />
           <a href="https://github.com/Dharma41/github_username" target="_blank" rel="noopener noreferrer" className="project-link">
             Github Repository
           </a>
         </div>
       </div>
-
-      {/* Right Arrow Button */}
-      <button className="arrow-btn arrow-right" onClick={handleNext}>
-        &#8250;
-      </button>
     </section>
   );
 }
