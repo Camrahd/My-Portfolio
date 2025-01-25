@@ -7,7 +7,7 @@ function Header() {
       <div className="header-container">
         {/* Logo or Branding */}
         <div className="logo">
-          <h1>Dharmendra</h1>
+          <h1>Dharmendra Reddy Chitte</h1>
         </div>
 
         {/* Navigation Menu */}

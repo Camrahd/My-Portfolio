@@ -24,7 +24,7 @@
 .logo h1 {
   font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #f6f6f6, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glowText 3s infinite alternate;
