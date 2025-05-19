@@ -15,36 +15,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Firebase integration (uncomment and configure)
-    /*
-    import firebase from 'firebase/app';
-    import 'firebase/firestore';
-    
-    const firebaseConfig = {
-      // Your Firebase config object
-    };
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
-    }
-    const db = firebase.firestore();
-    
-    db.collection('contacts')
-      .add({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      })
-      .then(() => {
-        setFormStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
-        setFormStatus('Error sending message. Please try again.');
-        console.error('Error:', error);
-      });
-    */
-    // Placeholder for testing
+
     setFormStatus('Message sent successfully!');
     setFormData({ name: '', email: '', message: '' });
   };

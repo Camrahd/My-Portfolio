@@ -1,12 +1,11 @@
-
-/* Header Styles */
+/* Header Section */
 .header {
   background: linear-gradient(to right, #1e3a8a, #4c1d95);
   color: white;
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -21,9 +20,10 @@
 
 /* Logo Styles */
 .logo h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -0.025em;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .logo a {
@@ -32,8 +32,8 @@
 }
 
 .logo a:hover {
-  color: #93c5fd;
-  transition: color 0.3s ease;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 /* Desktop Navigation */
@@ -50,16 +50,32 @@
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #93c5fd;
+  transition: width 0.3s ease;
 }
 
 .nav-item:hover {
   color: #93c5fd;
-  transition: color 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
 }
 
 .nav-item:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
 /* Mobile Menu Button */
@@ -68,21 +84,27 @@
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
 }
 
 .menu-toggle:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
 /* Mobile Menu */
 .mobile-menu {
   display: none;
   background: #4c1d95;
-  padding: 1rem;
-  animation: slideIn 0.3s ease-in-out;
+  padding: 1.5rem;
+  animation: slideIn 0.4s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .mobile-nav-links {
@@ -92,7 +114,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.mobile-nav-links .nav-item {
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav-links .nav-item:hover {
+  color: #93c5fd;
+  transform: translateX(5px);
+}
+
+.mobile-nav-links .nav-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
@@ -108,24 +170,9 @@
   .mobile-menu {
     display: block;
   }
-}
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
+  .logo h1 {
+    font-size: 1.5rem;
   }
 }
 

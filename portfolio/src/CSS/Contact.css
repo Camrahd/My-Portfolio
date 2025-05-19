@@ -6,20 +6,49 @@
   background: #f9fafb;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(76, 29, 149, 0.1), transparent);
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 700;
   color: #1e3a8a;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #1e3a8a, #4c1d95);
+  margin: 0.5rem auto;
+  border-radius: 2px;
 }
 
 .contact-subtitle {
   font-size: 1.25rem;
   font-weight: 500;
   color: #4c1d95;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .contact-text {
@@ -34,40 +63,59 @@
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .contact-icon-link {
   color: #4c1d95;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icon-link:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-5px);
   color: #1e3a8a;
+  box-shadow: 0 8px 16px rgba(76, 29, 149, 0.3);
 }
 
 .contact-icon-link:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
 /* Animated SVG */
 .animated-svg {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  animation: pulseSvg 2s ease-in-out infinite;
 }
 
-/* Contact Form (Optional) */
+.animated-svg svg {
+  filter: drop-shadow(0 0 10px rgba(76, 29, 149, 0.5));
+}
+
+/* Contact Form */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
   background: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(76, 29, 149, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
 }
 
 .form-title {
@@ -75,6 +123,7 @@
   font-weight: 600;
   color: #1e3a8a;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .form-group {
@@ -96,51 +145,68 @@
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #d1d5db;
-  border-radius: 4px;
-  transition: border-color 0.3s ease;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #4c1d95;
+  box-shadow: 0 0 8px rgba(76, 29, 149, 0.3);
   outline: none;
 }
 
 .form-group textarea {
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
 }
 
 .form-submit {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background: #4c1d95;
+  background: linear-gradient(to right, #4c1d95, #1e3a8a);
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-submit:hover {
-  background: #1e3a8a;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(76, 29, 149, 0.3);
 }
 
 .form-status {
   margin-top: 1rem;
   font-size: 1rem;
   color: #374151;
+  text-align: center;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSvg {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(76, 29, 149, 0.5));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(76, 29, 149, 0.8));
   }
 }
 
@@ -162,11 +228,30 @@
     gap: 1.5rem;
   }
 
+  .contact-icon-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .animated-svg {
+    width: 100px;
+    height: 100px;
+  }
+
   .contact-form {
     padding: 1.5rem;
   }
 
   .form-title {
     font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.875rem;
+  }
+
+  .form-submit {
+    font-size: 0.875rem;
   }
 }

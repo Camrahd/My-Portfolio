@@ -3,6 +3,54 @@ import '../CSS/Projects.css';
 
 const projects = [
   {
+    title: 'Full-Stack eCommerce Platform',
+    date: 'Mar 2025 - May 2025',
+    description: (
+      <>
+        <p>A robust eCommerce platform supporting seamless shopping experiences, featuring:</p>
+        <ul>
+          <li><strong>RESTful APIs:</strong> Built with Spring Boot for efficient backend operations.</li>
+          <li><strong>Optimized Database:</strong> Improved MySQL performance by 30%, handling 50+ concurrent users with 95% reliability.</li>
+          <li><strong>Containerization:</strong> Used Docker and Compose to reduce deployment time by 40%.</li>
+          <li><strong>Frontend Engagement:</strong> Leveraged Next.js Server-Side Rendering for a 25% increase in user engagement.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend:</strong> Next.js</li>
+          <li><strong>Backend:</strong> Spring Boot</li>
+          <li><strong>Database:</strong> MySQL</li>
+          <li><strong>DevOps:</strong> Docker, Docker Compose</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/ecommerce-frontend',
+     // Add GitHub URL here, e.g., 'https://github.com/Dharma41/ecommerce-platform'
+    live: '', // Add live demo URL here, if available
+  },
+  {
+    title: 'OSU MinHub Chatbot',
+    date: 'Apr 2025',
+    description: (
+      <>
+        <p>A voice-enabled chatbot for mental health support, recognized with 1st Prize in ACM Hackathon 2025, featuring:</p>
+        <ul>
+          <li><strong>Voice Interaction:</strong> Integrated Web Speech API for accessible speech-to-text self-care resources.</li>
+          <li><strong>AI Integration:</strong> Utilized OpenAI for intelligent response generation.</li>
+          <li><strong>Responsive UI:</strong> Built with React for a user-friendly interface.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend:</strong> React.js</li>
+          <li><strong>Backend:</strong> Node.js</li>
+          <li><strong>Database:</strong> MongoDB</li>
+          <li><strong>APIs:</strong> Web Speech API, OpenAI</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/appathon', // Add GitHub URL here, e.g., 'https://github.com/Dharma41/osu-minhub-chatbot'
+    live: 'https://mentalsupport-osu.netlify.app/', // Replace with actual live demo URL
+  },
+  {
     title: 'Real-Time Chat Application',
     date: 'Sept 2024 - Dec 2024',
     description: (
@@ -20,7 +68,7 @@ const projects = [
         </ul>
       </>
     ),
-    github: 'https://github.com/Camrahd/Chat_Application',
+    github: 'https://github.com/Dharma41/Chat_Application', // Updated to Dharma41
     live: 'https://realtimechatapp12.netlify.app/',
   },
   {
@@ -35,13 +83,13 @@ const projects = [
         </ul>
         <p><strong>Technology Stack:</strong></p>
         <ul>
-          <li><strong>Frontend & Backend:</strong>PHP</li>
-          {/* <li><strong>Backend:</strong> PHP</li> */}
+          <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+          <li><strong>Backend:</strong> PHP</li>
           <li><strong>Databases:</strong> MySQL</li>
         </ul>
       </>
     ),
-    github: 'https://github.com/Camrahd/Library_Management_System',
+    github: 'https://github.com/Dharma41/Library_Management_System', // Updated to Dharma41
   },
   {
     title: 'Budget Allocation Application',
@@ -59,7 +107,7 @@ const projects = [
         </ul>
       </>
     ),
-    github: 'https://github.com/Camrahd/ejtos-react_budget_app',
+    github: 'https://github.com/Dharma41/ejtos-react_budget_app', // Updated to Dharma41
   },
   {
     title: 'GitHub User Bio Application',
@@ -78,7 +126,7 @@ const projects = [
         </ul>
       </>
     ),
-    github: 'https://github.com/Camrahd/github_username',
+    github: 'https://github.com/Dharma41/github_username', // Updated to Dharma41
     live: 'https://getgithubuserbio.netlify.app/',
   },
 ];
