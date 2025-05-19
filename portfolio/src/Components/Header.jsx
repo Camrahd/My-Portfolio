@@ -34,6 +34,11 @@ function Header() {
               </a>
             </li>
             <li>
+              <a href="#experience" className="nav-item" aria-label="Experience section">
+                Experience
+              </a>
+            </li>
+            <li>
               <a href="#contact" className="nav-item" aria-label="Contact section">
                 Contact
               </a>
