@@ -15,63 +15,55 @@ import ai_logo from '../Assets/ai.png';
 import '../CSS/About.css';
 
 const skills = [
-  { logo: java_logo, name: "Java" },
-  { logo: python_logo, name: "Python" },
-  { logo: html_logo, name: "HTML" },
-  { logo: css_logo, name: "CSS" },
-  { logo: javascript_logo, name: "JavaScript" },
-  { logo: react_logo, name: "React.js" },
-  { logo: nodejs_logo, name: "Node.js" },
-  { logo: django_logo, name: "Django" },
-  { logo: git_logo, name: "Git & Github" },
-  { logo: mongodb_logo, name: "mongo DB" },
-  { logo: mysql_logo, name: "Mysql" },
-  { logo: ai_logo, name: "Artificial Intelligence" },
-
+  { logo: java_logo, name: 'Java' },
+  { logo: python_logo, name: 'Python' },
+  { logo: html_logo, name: 'HTML' },
+  { logo: css_logo, name: 'CSS' },
+  { logo: javascript_logo, name: 'JavaScript' },
+  { logo: react_logo, name: 'React.js' },
+  { logo: nodejs_logo, name: 'Node.js' },
+  { logo: django_logo, name: 'Django' },
+  { logo: git_logo, name: 'Git & GitHub' },
+  { logo: mongodb_logo, name: 'MongoDB' },
+  { logo: mysql_logo, name: 'MySQL' },
+  { logo: ai_logo, name: 'Artificial Intelligence' },
 ];
 
 const About = () => {
   return (
-    <div id="about" className="about-container">
-      <div className="about-background"></div>
-      
-      <h1 className="about-title">About Me</h1>
-      
+    <section id="about" className="about">
+      <h2 className="about-title">About Me</h2>
       <div className="about-content">
         {/* Profile Image */}
         <div className="about-image">
-          <img src={profile} alt="Profile" className="profile-image" />
+          <img src={profile} alt="Dharmendra Reddy Chitte's profile" className="profile-image" />
         </div>
-        
+
         {/* Text Content */}
         <div className="about-text">
-          <p>
+          <p className="about-description">
             I am a Full Stack Developer passionate about learning, quick to adapt, and motivated to solve problems. 
             I have a strong foundation in full-stack development and am eager to contribute to the industry.
           </p>
-          
+
           {/* Education Section */}
           <div className="education">
-            <h2 className="education-title">Education</h2>
+            <h3 className="education-title">Education</h3>
             <div className="education-item">
-              <div className="education-details">
-                <h3>Master in Computer Science</h3>
-                <span className="education-year">2023-2025</span>
-              </div>
-              <p>
-                Oklahoma State University
-                <span className="gpa"> | GPA: 4.0</span>
+              <h4>Master in Computer Science</h4>
+              <p className="education-details">
+                Oklahoma State University | 2023–2025 | GPA: 4.0
               </p>
             </div>
           </div>
-          
+
           {/* Skills Section */}
           <div className="skills">
-            <h2 className="skills-title">Skills</h2>
+            <h3 className="skills-title">Skills</h3>
             <div className="skills-grid">
               {skills.map((skill, index) => (
                 <div key={index} className="skill-item">
-                  <img src={skill.logo} alt={skill.name} className="skill-icon" />
+                  <img src={skill.logo} alt={`${skill.name} logo`} className="skill-icon" />
                   <p>{skill.name}</p>
                 </div>
               ))}
@@ -79,7 +71,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

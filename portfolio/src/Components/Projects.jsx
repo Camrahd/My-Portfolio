@@ -1,72 +1,125 @@
 import React from 'react';
 import '../CSS/Projects.css';
 
+const projects = [
+  {
+    title: 'Real-Time Chat Application',
+    date: 'Sept 2024 - Dec 2024',
+    description: (
+      <>
+        <p>A seamless and secure platform for real-time communication with the following features:</p>
+        <ul>
+          <li><strong>Google Authentication:</strong> Secure user login.</li>
+          <li><strong>One-on-One Chats:</strong> Private, real-time conversations.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend:</strong> React.js</li>
+          <li><strong>Backend:</strong> Node.js</li>
+          <li><strong>Database:</strong> MongoDB Atlas</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/Chat_Application',
+    live: 'https://realtimechatapp12.netlify.app/',
+  },
+  {
+    title: 'Library Management System',
+    date: 'Sept 2023 - Dec 2023',
+    description: (
+      <>
+        <p>A full-stack system for managing library operations, featuring:</p>
+        <ul>
+          <li><strong>Web Interface:</strong> User-friendly dashboard for book management.</li>
+          <li><strong>Database Integration:</strong> Efficient data handling with MySQL and MongoDB.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend & Backend:</strong>PHP</li>
+          {/* <li><strong>Backend:</strong> PHP</li> */}
+          <li><strong>Databases:</strong> MySQL</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/Library_Management_System',
+  },
+  {
+    title: 'Budget Allocation Application',
+    date: 'June 2024',
+    description: (
+      <>
+        <p>A budgeting tool for departmental expense planning, featuring:</p>
+        <ul>
+          <li><strong>Interactive UI:</strong> Easy expense tracking and allocation.</li>
+          <li><strong>Enhanced Features:</strong> Completed codebase with custom requirements.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend:</strong> React.js</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/ejtos-react_budget_app',
+  },
+  {
+    title: 'GitHub User Bio Application',
+    date: 'Sept 2024',
+    description: (
+      <>
+        <p>A web app that fetches and displays GitHub user profiles using the GitHub API, with:</p>
+        <ul>
+          <li><strong>API Integration:</strong> Real-time user data retrieval.</li>
+          <li><strong>Responsive Design:</strong> Clean, user-friendly interface.</li>
+        </ul>
+        <p><strong>Technology Stack:</strong></p>
+        <ul>
+          <li><strong>Frontend:</strong> React.js</li>
+          <li><strong>API:</strong> Axios, GitHub API</li>
+        </ul>
+      </>
+    ),
+    github: 'https://github.com/Camrahd/github_username',
+    live: 'https://getgithubuserbio.netlify.app/',
+  },
+];
+
 function Projects() {
   return (
-    <section id="projects" className="projects-container">
+    <section id="projects" className="projects">
       <h2 className="projects-title">My Projects</h2>
-      <div className="project-grid">
-      <div className="project-card">
-          <h3>Real Time Chat Application <span className="project-date">(Sept 2024 - Dec 2024)</span></h3>
-          
-  <strong>Description:</strong>
-  <p>
-    The Real-Time Chat Application is designed to offer a seamless and secure communication platform for users to interact in real-time. Key features include:
-  </p>
-  <ul>
-    <li><strong>Google Authentication:</strong> Enables users to securely log in and access the platform.</li>
-    <li><strong>One-on-One Chats:</strong> Supports private and secure individual conversations.</li>
-  </ul>
-  <p><strong>Technology Stack:</strong></p>
-  <ul>
-    <li><strong>Frontend:</strong> Built with React.js to deliver an interactive and user-friendly interface.</li>
-    <li><strong>Backend:</strong> Developed using Node.js to handle server-side operations efficiently.</li>
-    <li><strong>Database:</strong> Utilized MongoDB Atlas for scalable and reliable data storage.</li>
-  </ul>
-
-
-          <a href="https://github.com/Dharma41/Chat_Application" target="_blank" rel="noopener noreferrer" className="project-link">
-            Github Repository
-          </a><br />
-          <a href="https://realtimechatapp12.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
-            Live Application
-          </a>
-        </div>
-        {/* Library Management System */}
-        <div className="project-card">
-          <h3>Library Management System <span className="project-date">(Sept 2023 - Dec 2023)</span></h3>
-          <p>
-            <strong>Description:</strong> Designed and implemented a full-stack library management system with integrated web page functionality, using MySQL and MongoDB.
-          </p>
-          <a href="https://github.com/Dharma41/Library_Management_System" target="_blank" rel="noopener noreferrer" className="project-link">
-            Github Repository
-          </a>
-        </div>
-
-        {/* Budget Allocation Application */}
-        <div className="project-card">
-          <h3>Budget Allocation Application <span className="project-date">(June 2024)</span></h3>
-          <p>
-            <strong>Description:</strong> Developed a comprehensive budgeting application for departmental expense planning, using React.js. Enhanced and completed the initial codebase with attention to specific feature requirements.
-          </p>
-          <a href="https://github.com/Dharma41/ejtos-react_budget_app" target="_blank" rel="noopener noreferrer" className="project-link">
-            Github Repository
-          </a>
-        </div>
-
-        {/* GitHub User Bio Application */}
-        <div className="project-card">
-          <h3>GitHub User Bio Application <span className="project-date">(Sept 2024)</span></h3>
-          <p>
-            <strong>Description:</strong> Created a web application that fetches and displays GitHub user details using the GitHub API. Implemented using React.js and Axios for seamless API integration.
-          </p>
-          <a href="https://getgithubuserbio.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
-            Live Application
-          </a><br />
-          <a href="https://github.com/Dharma41/github_username" target="_blank" rel="noopener noreferrer" className="project-link">
-            Github Repository
-          </a>
-        </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <article key={index} className="project-card">
+            <h3 className="project-title">
+              {project.title} <span className="project-date">({project.date})</span>
+            </h3>
+            <div className="project-description">{project.description}</div>
+            <div className="project-links">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  aria-label={`GitHub repository for ${project.title}`}
+                >
+                  GitHub Repository
+                </a>
+              )}
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  aria-label={`Live demo of ${project.title}`}
+                >
+                  Live Application
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
