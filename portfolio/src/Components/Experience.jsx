@@ -4,7 +4,8 @@ import '../CSS/Experience.css';
 const experiences = [
   {
     title: 'Full Stack Developer',
-    company: 'Oklahoma State University',
+    company: 'InfraTie Solutions',
+    // company: 'Oklahoma State University',
     location: 'Stillwater, OK',
     date: 'Jan 2024 – Present',
     responsibilities: [
@@ -16,7 +17,8 @@ const experiences = [
   },
   {
     title: 'Software Developer',
-    company: 'Oracle Financial Services Software',
+    company: 'Oracle',
+    // company: 'Oracle Financial Services Software',
     location: 'Karnataka, India',
     date: 'Jul 2022 – Aug 2023',
     responsibilities: [
@@ -27,7 +29,7 @@ const experiences = [
     ],
   },
   {
-    title: 'Programmer Analyst Trainee Intern',
+    title: 'Software Development Intern',
     company: 'Cognizant',
     location: 'Hyderabad, India',
     date: 'Jan 2022 – Jun 2022',
