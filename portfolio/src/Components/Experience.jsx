@@ -29,7 +29,7 @@ const experiences = [
     // ],
   },
   {
-    title: 'Junior Web Development ',
+    title: 'Junior Web Developer ',
     company: 'Cognizant',
     location: 'Hyderabad, India',
     date: 'Jan 2022 – Jun 2022',
